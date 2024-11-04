@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background-color: pink;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+}
+
+/* App */
+.grouping {
+  display: flex;
+  flex-direction: row;
+  width: 99vw;
+  height: 50vh;
+  margin-bottom: 10vh;
+}
+
+.word-display {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  height: 20vh;
+  width: 99vw;
+  font-size: 90px;
+  background-color: yellow;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* Guessing */
+.keyboard {
+  background-color: purple;
+  max-width: 55vw;
+  height: 50vh;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  height: 50px;
+  width: 50px;
+  background-color: skyblue;
+  border-radius: 50%;
   color: white;
+  display: inline;
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Hangman */
+.hangman {
+  background-color: red;
+  width: 45vw;
+  height: 50vh;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
