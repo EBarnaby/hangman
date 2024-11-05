@@ -13,7 +13,7 @@ export default function Guessing({ guessedLetter, setGuessedLetter }) {
         {alphabet.map((letter) => {
           if (guessedLetter.includes(letter)) {
             return (
-              <button className="circle" disabled>
+              <button className="circle-guessed" disabled>
                 <p>{letter}</p>
               </button>
             )
@@ -27,6 +27,6 @@ export default function Guessing({ guessedLetter, setGuessedLetter }) {
 
         })}
       </div>
-    </section>
+    </section >
   );
 }

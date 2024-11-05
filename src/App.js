@@ -5,25 +5,19 @@ import Word from "./Word";
 import React, { useEffect, useState } from "react";
 
 function App() {
-  const [word, setWord] = useState("BOO");
+  const [word, setWord] = useState("HAGGIS");
   const [guessedLetter, setGuessedLetter] = useState([]);
   const [counter, setCounter] = useState(0);
-  useEffect(() => {
-    if (guessedLetter.length > 0 && !word.split("").includes(guessedLetter[guessedLetter.length - 1])) {
-      setCounter(counter + 1)
-    }
-  }, [word, guessedLetter])
-
-  function gameOver() {
-    setGuessedLetter = 0;
-    setCounter = 0;
-  }
+  const [gameOver, setGameOver] = useState(false);
 
   useEffect(() => {
-    if (counter.length > 13) {
-      gameOver();
+    if (
+      guessedLetter.length > 0 &&
+      !word.split("").includes(guessedLetter[guessedLetter.length - 1])
+    ) {
+      setCounter(counter + 1);
     }
-  }, [word, guessedLetter])
+  }, [word, guessedLetter]);
 
   return (
     <>
@@ -31,8 +25,11 @@ function App() {
         <Word hiddenWord={word} guessedLetter={guessedLetter} />
       </div>
       <div className="grouping">
-        <Guessing guessedLetter={guessedLetter} setGuessedLetter={setGuessedLetter} />
-        <Hangman imgCounter={counter} />
+        <Guessing
+          guessedLetter={guessedLetter}
+          setGuessedLetter={setGuessedLetter}
+        />
+        <Hangman imgCounter={counter} end={gameOver} />
       </div>
     </>
   );

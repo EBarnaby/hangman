@@ -1,5 +1,5 @@
 body {
-  background-color: pink;
+  background-color: #f3c0cc;
   display: flex;
   justify-content: center;
 }
@@ -15,23 +15,26 @@ body {
 
 /*Word*/
 .word-display {
-  margin-top: 10vh;
-  margin-bottom: 5vh;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
   height: 20vh;
   width: 100vw;
   font-size: 100px;
-  background-color: yellow;
+  background-color: #c9aad7;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  color: #6c5988;
 }
 
 /* Guessing */
 .keyboard {
-  background-color: purple;
-  max-width: 55vw;
+  background-color: #eb6f8e;
+  max-width: 50vw;
+  border-radius: 25%;
   height: 50vh;
   padding: 10px;
+  margin-left: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -41,9 +44,27 @@ body {
 .circle {
   height: 50px;
   width: 50px;
-  background-color: skyblue;
+  background-color: #b3a2cd;
   border-radius: 50%;
-  color: white;
+  border: 2px solid #f3c0cc;
+  color: #6c5988;
+  display: inline;
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle:hover{
+  background-color: #c9aad7;
+}
+
+.circle-guessed{
+  height: 50px;
+  width: 50px;
+  background-color: #f3c0cc;
+  border-radius: 50%;
+  border: 2px solid #f3c0cc;
+  color: #6c5988;
   display: inline;
   margin: 5px;
   align-items: center;
@@ -52,15 +73,17 @@ body {
 
 /* Hangman */
 .hangman {
-  background-color: red;
   width: 45vw;
   height: 50vh;
-  padding: 10px;
+  margin-left: 5vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 img{
-  max-width: 100%;
+  max-width: 90%;
+  border: dotted 7px #eb6f8e;
+  border-radius: 10%;
+  height: 40vh;
 }
