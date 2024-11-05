@@ -8,21 +8,22 @@ body {
 .grouping {
   display: flex;
   flex-direction: row;
-  width: 99vw;
+  width: 100vw;
   height: 50vh;
   margin-bottom: 10vh;
 }
 
+/*Word*/
 .word-display {
   margin-top: 10vh;
-  margin-bottom: 10vh;
+  margin-bottom: 5vh;
   height: 20vh;
-  width: 99vw;
-  font-size: 90px;
+  width: 100vw;
+  font-size: 100px;
   background-color: yellow;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 /* Guessing */
@@ -58,4 +59,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+img{
+  max-width: 100%;
 }

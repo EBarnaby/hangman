@@ -1,11 +1,16 @@
 import "./App.css";
 
-export default function Word() {
+export default function Word({ hiddenWord, guessedLetter, ...otherProps }) {
   return (
-    <div className="word-display">
-      <h3>*</h3>
-      <h3>*</h3>
-      <h3>*</h3>
-    </div>
+    <>
+      {hiddenWord.split("").map((letter) => {
+        if (guessedLetter.includes(letter)) {
+          return <h3>{letter}</h3>;
+        } else {
+          return <h3>*</h3>;
+        }
+
+      })}
+    </>
   );
 }
