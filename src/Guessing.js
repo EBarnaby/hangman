@@ -24,7 +24,6 @@ export default function Guessing({ guessedLetter, setGuessedLetter }) {
               </button>
             )
           }
-
         })}
       </div>
     </section >
