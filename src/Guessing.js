@@ -28,7 +28,7 @@ export default function Guessing({ guessedLetter, setGuessedLetter }) {
   useEffect(() => {
     window.addEventListener("keypress", letterKeyDown)
     return () => window.removeEventListener("keypress", letterKeyDown)
-  }, [])
+  }, [guessedLetter])
 
   return (
     <section className="guessing">
