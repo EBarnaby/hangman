@@ -13,12 +13,15 @@ function App() {
   const [win, setWin] = useState(false);
 
   async function createWord() {
-    // const response = await fetch("https://random-word-api.herokuapp.com/word").then(res => res.json()).then(data => { return data });
-    // console.log(response[0].toUpperCase())
-    // return response[0].toUpperCase()
-    const response = await fetch("https://random-word-api.herokuapp.com/word");
-    let json = await response.json()
-    setWord(json[0].toUpperCase())
+    let run = true;
+    while (run) {
+      const response = await fetch("https://random-word-api.herokuapp.com/word");
+      let json = await response.json()
+      if (json[0].length < 13) {
+        setWord(json[0].toUpperCase())
+        run = false;
+      }
+    }
   }
   useEffect(() => {
     createWord();
@@ -36,7 +39,6 @@ function App() {
     if (win) setWin(true)
   }
 
-  console.log(word)
   useEffect(() => {
     if (word.length > 0) {
       if (
@@ -50,14 +52,7 @@ function App() {
       }
       isSubset()
     }
-
-    //gets letters guessed
-    //if over 12, game over
-
-    //todo endgame
   }, [word, guessedLetter]);
-
-  //
 
   function endGame() {
     createWord();
@@ -69,22 +64,6 @@ function App() {
 
   return (
     <>
-      {win ?
-        <Dialog
-          title="Congratulations!"
-          description="You correctly guessed the word!"
-          reset={endGame}
-        /> :
-        null
-      }
-      {gameOver ?
-        <Dialog
-          title="Oh Snap!"
-          description="The man is dead!"
-          reset={endGame}
-        /> :
-        null
-      }
       <div className="word-display">
         <Word
           hiddenWord={word}
@@ -92,12 +71,39 @@ function App() {
         />
       </div>
       <div className="grouping">
-        <Guessing
-          guessedLetter={guessedLetter}
-          setGuessedLetter={setGuessedLetter}
-        />
+        {win ?
+          <Dialog
+            title="Congratulations!"
+            description="You correctly guessed the word!"
+            reset={endGame}
+          /> :
+          null
+        }
+        {gameOver ?
+          <Dialog
+            title="Oh Snap!"
+            description="The man is dead!"
+            reveal="The word was: "
+            word={word}
+            reset={endGame}
+          /> :
+          null
+        }
+        {!win && !gameOver ?
+          <>
+            <Guessing
+              guessedLetter={guessedLetter}
+              setGuessedLetter={setGuessedLetter}
+            /
+            >
+          </>
+
+          :
+          null
+        }
         <Hangman
-          imgCounter={counter} />
+          imgCounter={counter}
+          win={win} />
       </div>
     </>
   );

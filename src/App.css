@@ -19,7 +19,7 @@ body {
   margin-bottom: 10vh;
   height: 20vh;
   width: 100vw;
-  font-size: 100px;
+  font-size: 90px;
   background-color: #c9aad7;
   display: flex;
   align-items: center;
@@ -43,8 +43,8 @@ body {
 }
 
 .circle {
-  height: 50px;
-  width: 50px;
+  height: 8vh;
+  width: 4vw;
   background-color: #b3a2cd;
   border-radius: 50%;
   border: 2px solid #f3c0cc;
@@ -60,8 +60,8 @@ body {
 }
 
 .circle-guessed {
-  height: 50px;
-  width: 50px;
+  height: 8vh;
+  width: 4vw;
   background-color: #f3c0cc;
   border-radius: 50%;
   border: 2px solid #f3c0cc;
@@ -89,28 +89,18 @@ img {
   height: 40vh;
 }
 
-/*dialog*/
-.background {
-  width: 100vw;
-  height: 100vh;
-  background-color: #97495c;
-  position: absolute;
-  opacity: 0.5;
-}
-
+/* dialog*/
 .popup {
-  width: 50vw;
-  height: 50vh;
   background-color: #eb6f8e;
-  border-radius: 5%;
-  border: solid 3px #97495c;
-  position: absolute;
-  transform: translate(50%, 50%);
+  width: 50vw;
+  border-radius: 25%;
+  height: 50vh;
+  padding: 10px;
+  margin-left: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  color: #3e334e;
 }
 
 .playAgain {
@@ -135,8 +125,10 @@ img {
 
 h4 {
   font-size: 25px;
+  margin: 5px;
 }
 
 h1 {
   font-size: 50px;
+  margin: 5px;
 }

@@ -1,7 +1,6 @@
 import "./App.css";
 
 export default function Word({ hiddenWord, guessedLetter, ...otherProps }) {
-  console.log(hiddenWord)
   return (
     <>
       {hiddenWord?.split("").map((letter) => {

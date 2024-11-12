@@ -1,7 +1,8 @@
 import "./App.css";
-import png from "./GameWon.png";
+import png from "./GameOver.png";
+import yes from "./GameWon.png";
 
-export default function Hangman({ imgCounter }) {
+export default function Hangman({ imgCounter, win }) {
   function importAll(r) {
     return r.keys().map(r);
   }
@@ -11,6 +12,14 @@ export default function Hangman({ imgCounter }) {
     return (
       <section className="hangman">
         <img src={png} alt="this is fine" />
+      </section>
+    )
+  }
+
+  if (win == true) {
+    return (
+      <section className="hangman">
+        <img src={yes} alt="yep" />
       </section>
     )
   }

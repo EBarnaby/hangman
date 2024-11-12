@@ -1,11 +1,34 @@
+import { useEffect } from "react";
 import "./App.css";
 
 export default function Guessing({ guessedLetter, setGuessedLetter }) {
   const alphabet = "QWERTYUIOPASDFGHJKLZXCVBNM".split("");
 
-  function letterClick(e) {
-    setGuessedLetter([...guessedLetter, e])
+  function letterClick(letter) {
+    setGuessedLetter(prevState => [...prevState, letter])
   }
+
+  function letterKeyDown(e) {
+    const letter = String.fromCharCode(e.charCode).toUpperCase()
+    const reg = /[a-zA-Z]+/g;
+    let res = reg.test(letter);
+
+    if (res == true) {
+      if (!guessedLetter.includes(letter)) {
+        setGuessedLetter(prevState => [...prevState, letter])
+      }
+      if (guessedLetter.includes(letter)) {
+
+      }
+    }
+  }
+
+  //repeating letters
+
+  useEffect(() => {
+    window.addEventListener("keypress", letterKeyDown)
+    return () => window.removeEventListener("keypress", letterKeyDown)
+  }, [])
 
   return (
     <section className="guessing">
