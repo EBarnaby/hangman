@@ -94,10 +94,8 @@ function App() {
             <Guessing
               guessedLetter={guessedLetter}
               setGuessedLetter={setGuessedLetter}
-            /
-            >
+            />
           </>
-
           :
           null
         }

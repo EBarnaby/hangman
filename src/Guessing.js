@@ -17,13 +17,8 @@ export default function Guessing({ guessedLetter, setGuessedLetter }) {
       if (!guessedLetter.includes(letter)) {
         setGuessedLetter(prevState => [...prevState, letter])
       }
-      if (guessedLetter.includes(letter)) {
-
-      }
     }
   }
-
-  //repeating letters
 
   useEffect(() => {
     window.addEventListener("keypress", letterKeyDown)
