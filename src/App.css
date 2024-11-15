@@ -1,5 +1,5 @@
 body {
-  background-color: #f3c0cc;
+  background-color: #fff2ec;
   display: flex;
   justify-content: center;
 }
@@ -20,17 +20,18 @@ body {
   height: 20vh;
   width: 100vw;
   font-size: 90px;
-  background-color: #c9aad7;
+  /* background-color: #c9aad7; */
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  color: #6c5988;
+  color: #8c2f39;
   font-family: cursive;
 }
 
 /* Guessing */
 .keyboard {
-  background-color: #eb6f8e;
+  background-color: #b23a48;
+  border: 2px solid #8c2f39;
   max-width: 50vw;
   border-radius: 25%;
   height: 50vh;
@@ -45,10 +46,10 @@ body {
 .circle {
   height: 8vh;
   width: 4vw;
-  background-color: #b3a2cd;
+  background-color: #f8ad9d;
   border-radius: 50%;
-  border: 2px solid #f3c0cc;
-  color: #6c5988;
+  border: 2px solid #461220;
+  color: #461220;
   display: inline;
   margin: 5px;
   align-items: center;
@@ -56,16 +57,16 @@ body {
 }
 
 .circle:hover {
-  background-color: #c9aad7;
+  background-color: #fbc4ab;
 }
 
 .circle-guessed {
   height: 8vh;
   width: 4vw;
-  background-color: #f3c0cc;
+  background-color: #fed0bb;
   border-radius: 50%;
-  border: 2px solid #f3c0cc;
-  color: #6c5988;
+  border: 2px solid #fed0bb;
+  color: #461220;
   display: inline;
   margin: 5px;
   align-items: center;
@@ -84,14 +85,14 @@ body {
 
 img {
   max-width: 90%;
-  border: dotted 7px #eb6f8e;
+  border: dotted 7px #b23a48;
   border-radius: 10%;
   height: 40vh;
 }
 
 /* dialog*/
 .popup {
-  background-color: #eb6f8e;
+  background-color: #b23a48;
   width: 50vw;
   border-radius: 25%;
   height: 50vh;
@@ -107,28 +108,30 @@ img {
   height: 15vh;
   width: 20vw;
   font-size: 30px;
-  background-color: #b3a2cd;
-  border: 2px solid #f3c0cc;
+  background-color: #f8ad9d;
+  border: 2px solid #461220;
   border-radius: 20%;
-  color: #6c5988;
+  color: #461220;
 }
 
 .playAgain:hover {
-  background-color: #c9aad7;
-  border: 2px solid #f3c0cc;
+  background-color: #fbc4ab;
+  border: 2px solid #461220;
 }
 
 .playAgain:active {
-  background-color: #f3c0cc;
-  border: 2px solid #f3c0cc;
+  background-color: #fed0bb;
+  border: 2px solid #461220;
 }
 
 h4 {
+  color: #461220;
   font-size: 25px;
   margin: 5px;
 }
 
 h1 {
+  color: #461220;
   font-size: 50px;
   margin: 5px;
 }

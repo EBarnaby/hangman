@@ -28,7 +28,7 @@ export default function Hangman({ imgCounter, win }) {
     <section className="hangman">
       <img
         src={images[imgCounter]}
-        alt="i no work :("
+        alt="Error"
       />
     </section>
   );
